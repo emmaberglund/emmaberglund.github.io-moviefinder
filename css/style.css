@@ -1,0 +1,133 @@
+@font-face {
+    font-family: Cheri;
+    src: url(CHERL___.TTF);
+}
+
+@font-face {
+    font-family: Geosans;
+    src: url(GeosansLight.ttf);
+}
+
+
+body {
+    
+    background: #efbfe7;
+
+
+}
+
+
+.container {
+    
+    text-align: center;
+    
+    border: 4px solid black;
+    background: #f8f2f2;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-radius: 2%;
+
+    
+
+}
+
+button {
+    font-family: Geosans, sans-serif;
+    font-size: 1em;
+    padding: 0.5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 1%;
+
+}
+
+button:hover {
+    background: #abafbe;
+
+
+}
+
+input:focus {
+    background: pink;
+    outline: none;
+
+}
+
+
+
+input {
+    font-size: 1em;
+    height: 25px;
+    font-family: Geosans, sans-serif;
+    margin-top: 3%;
+    margin-bottom: 3%;
+
+
+
+
+}
+
+h1 {
+    font-family: Cheri, sans-serif;
+    font-size: 3em;
+    color: #eb72cb;
+
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+li {
+    text-align: left;
+
+}
+
+p {
+    font-family: Geosans, sans-serif;
+    font-size: 1.3em;
+
+}
+
+ul {
+    padding-top: 15px;
+
+
+}
+
+
+
+li {
+    font-family: sans-serif;
+    line-height: 1.5em;
+    font-style: italic;
+
+
+
+}
+
+ul>li:first-of-type {
+    font-size: 2em;
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+.nyckelord {
+    font-weight: bold;
+
+
+}
+
+img {
+    float: right;
+    max-width: 30%;
+    margin: 0 5% 5% 5%;
+    border: solid;
+
+
+}

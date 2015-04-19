@@ -1,0 +1,105 @@
+function getMovieFeed() {
+
+
+    var movie = $("input").val();
+    var movieAPI = "http://www.omdbapi.com/?t=";
+
+
+
+    var movieOptions = {
+        r: "json",
+        t: movie
+    }
+
+
+
+    function displayMovies(response) {
+
+
+        movieAPI = movieAPI + movie;
+
+
+        var parsing = JSON.parse(response);
+        console.log(parsing);
+
+        var movieList = "<ul>";
+
+
+
+        movieList += "<img src=" + parsing.Poster + "alt='movie poster'>";
+
+        delete parsing.Poster;
+        delete parsing.Type;
+        delete parsing.Response;
+        delete parsing.Metascore;
+
+
+
+        for (var item in parsing)
+        {
+            $("parsing.Poster").hide();
+            movieList += "<li>" + "<span class='nyckelord'>" + item + "</span>" + ": " + parsing[item] + "</li>";
+
+        if (parsing.Response === false)
+        {
+            alert("error!")
+
+        }
+
+        }
+
+
+        movieList += "</ul>";
+
+
+
+
+
+        $("#movies").html(movieList);
+    }
+
+
+
+    $.get(movieAPI, movieOptions, displayMovies)
+    $("input").val("");
+
+    /*
+
+
+*/
+
+    /*
+    $.ajax ({
+        url: movieAPI,
+        success: function(response){
+            console.log(response)
+    },
+
+        error: function() {
+            console.log("knaseri")
+    },
+
+        timeout: 3000
+})
+
+
+    */
+
+
+};
+
+
+
+
+    $("button").click(getMovieFeed);
+
+    $(document).keypress(function(event){ //den tangent jag trycker på.
+        if(event.charCode === 13)
+        {
+            getMovieFeed();
+
+        }
+
+    })
+
+
